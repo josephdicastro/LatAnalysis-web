@@ -1,38 +1,192 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Latitude Analyses</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+    <title>Latitude Analyses</title>
+</head>
 
 <body>
-    <header>
+    <div class="container-sm">
+        <header>
+            <nav class="navbar navbar-expand-sm">
+                <a class="nav-item active"
+                   href="index.html">
+                    Latitude Analysis</a>
+                <div class="collapse navbar-collapse"
+                     id="navbarNavDropdown">
+                    <ul class="navbar-nav">
 
-        <nav>
-            <ul>
-                <li><a href="/">Latitude Analysis</a></li>
-                <li>Plots
-                    <ul>
-                        <li></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarDropdownMenuLink"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                Plots</a>
+                            <div class="dropdown-menu"
+                                 aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="maxtemp.html">Max Temp</a>
+                                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                                <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="comparisons.html">
+                                Comparisons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="data.html">
+                                Data</a></li>
+
                     </ul>
-                </li>
-                <li>Comparison</li>
-                <li>Data</li>
-            </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="row">
+                <div class="col-sm-8">
+                    <article>
+                        <h1 class="h1_main">Summary: Latitude vs. X</h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <figure>
+                                    <figcaption class="fig_caption">Example Plot: Latitude vs Max Temp</figcaption>
+                                    <img src="visualizations/maxtemp_cropped.png"
+                                         alt="Max Temperatures by Latitude"
+                                         class="img-fluid">
+                                </figure>
+                            </div>
+                            <div class="col-sm">
+                                <p>The purpose of this project was to analyze how weather changes based on distance from
+                                    the equator.</p>
+                                <p>Specifically: I was looking at the relationship between the following four variables:
+                                </p>
+                                <ul class="list_none">
+                                    <li>Latitude vs. Max Temperatures</li>
+                                    <li>Latitude vs. Humidity</li>
+                                    <li>Latitude vs. Cloudiness</li>
+                                    <li>Latitude vs. Wind Speed (mph)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <p>To accomplish this analysis, I completed the following steps:</p>
+                                <ol>
+                                    <li>Generated a list of 1422 unique cities from CitiPy.</li>
+                                    <li>For each of those cities, I queried the OpenWeatherMap API to see if the city
+                                        was in the OWM dataset.</li>
+                                    <li>After checking all 1422 cities, I had results on 1244 cities.</li>
+                                    <li>I plotted these results using MatPlotLib, one graph for each of the four
+                                        questions.
+                                    </li>
+                                    <li>I also overlaid a linear regression line on each plot to visualize if there was
+                                        a linear relationship between latitude and each variable.</li>
+                                </ol>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2"
+                                                    class="info">Weather Analysis Dataset</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Area</th>
+                                                <th>Count</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cities in Northern Hemisphere:<br>(positive latitudes)</td>
+                                                <td>881</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cities in Southern Hemisphere:<br>(negative latitudes)</td>
+                                                <td>354</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total Number of Cities:</td>
+                                                <td>1244</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cities NOT in OWM</td>
+                                                <td>178</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <aside>
+                        <h1 class="h1_aside">Visualizations</h1>
+                        <nav>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <a href="maxtemp.html"><span class="viz_links">Max Temp</span>
+                                        <img src="visualizations/maxtemp_cropped.png"
+                                             class="img-fluid"
+                                             alt="Graph showing relationship between latitude and max temperatures."></a>
+                                </div>
+                                <div class="col-sm">
+                                    <a href="humidity.html"><span class="viz_links">Humidity</span>
+                                        <img src="visualizations/humidity_cropped.png"
+                                             class="img-fluid"
+                                             alt="Graph showing relationship between latitude and humidity."></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <a href="cloudiness.html"><span class="viz_links">Cloudiness</span>
+                                        <img src="visualizations/cloudiness_cropped.png"
+                                             class="img-fluid"
+                                             alt="Graph showing relationship between latitude and cloudiness."></a>
+                                </div>
+                                <div class="col-sm">
+                                    <a href="windspeed.html"><span class="viz_links">Windspeed</span>
+                                        <img src="visualizations/windspeed_cropped.png"
+                                             class="img-fluid"
+                                             alt="Graph showing relationship between latitude and wind speeds."></a>
+                                </div>
+                            </div>
 
-        </nav>
-    </header>
-    <article>
-        <h1>Summary: Analysis of Weather-Related Phenomena by Latitude</h1>
-    </article>
-    <aside>
-        <h2>Visualizations</h2>
-    </aside>
-    <footer>
-        Copyright: blah blah blah
-    </footer>
+
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="bg_gray">
+            &copy; Copyright: Joseph DiCastro 2019
+        </footer>
+    </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 </html>
