@@ -41,23 +41,23 @@ footer {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    margin: 3px;
+    margin: 5px;
     border:transparent 2px dotted;
     color:steelblue;
+}
+
+.viz_links_bigger {
+    font-size:1.5em;
 }
 
 .viz_links_active {
     border: 2px dotted lightsteelblue;
 }
 
-#secondaryNav a:hover{
+#visualization_links a:hover{
     border: 2px dotted lightsteelblue;
     text-decoration: none;
     color:steelblue;
-}
-
-bg_lightsteelblue {
-    background-color: lightsteelblue;
 }
 
 
