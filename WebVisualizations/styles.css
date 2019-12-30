@@ -1,72 +1,77 @@
 h1 {
-    height: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    height: 70px;
+    padding-top: 20px;
+    padding-bottom: 50px;
     border-bottom: dashed darkgray 1px;
 }
 
 .h1_main {
-    font-size: 35px;
+    font-size: 2em;
 }
 
 .h1_aside {
-    font-size: 25px;
-    padding-top: 20px;
+    font-size: 1.5em;
+    padding-top: 30px;
+    padding-bottom:10px;
     text-align: center;
 }
 
+header {
+    border-bottom: darkgray solid 5px;
+}
 footer {
     height: 70px;
     text-align: center;
     font-style: italic;
     font-weight: bold;
     font-size: small;
+    color: #ffffff;
     padding-top: 10px;
     margin-top: 20px;
     border-top: darkgray solid 5px;
 }
 
-figure {
-    position: relative;
-    top: -25px;
-    left: -10px;
-}
-
-.fig_caption {
-    text-align: center;
-    font-style: italic;
-    font-size: smaller;
+.mainFigure_caption {
+    font-size: .75em;
     color: #c51f19;
-    position: relative;
-    top: 20px;
 }
 
 .viz_links {
-    font-size: smaller;
+    font-size: .65em;
     text-decoration: none;
-    position: relative;
-    left: 55px;
-    top: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin: 3px;
+    border:transparent 2px dotted;
+    color:steelblue;
 }
+
+.viz_links_active {
+    border: 2px dotted lightsteelblue;
+}
+
+#secondaryNav a:hover{
+    border: 2px dotted lightsteelblue;
+    text-decoration: none;
+    color:steelblue;
+}
+
+bg_lightsteelblue {
+    background-color: lightsteelblue;
+}
+
 
 .list_circle {
     list-style: circle;
 }
 
-.bg_gray {
-    background-color: darkgray;
+@media (max-width:768px) {
+    h1 {background-color: lightgray;}
 }
-
-.marginleft_20 {
-    margin-left: 20px;
-}
-
-@media (max-width: 576px) {
+@media (max-width:500px) {
+    h1 {background-color: lightgray;}
     .h1_main {
-        height: 100px;
-    }
-    .fig_caption {
-        top: 10px;
+        font-size: 1.5em;
+        height:100px;
     }
 }
