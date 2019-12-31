@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+    <title>Latitude Analyses: Latitude vs. Cloudiness</title>
+</head>
+
+<body>
+    <div class="container-md">
+        <header>
+            <nav class="navbar 
+                        navbar-expand-md 
+                        navbar-dark 
+                        bg-dark">
+                <a href="index.html" class="navbar-brand">Latitude Analysis</a>
+                <button type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle Navigation"
+                        class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent"
+                     class="collapse 
+                            navbar-collapse 
+                            justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdownMenuLink"
+                               href="#"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false"
+                               class="nav-link 
+                                      dropdown-toggle
+                                      active">
+                                Plots</a>
+                            <div aria-labelledby="navbarDropdownMenuLink"
+                                 class="dropdown-menu">
+                                <a href="maxtemp.html" class="dropdown-item">Max Temp</a>
+                                <a href="humidity.html" class="dropdown-item">Humidity</a>
+                                <a href="cloudiness.html" class="dropdown-item active bg-dark">Cloudiness</a>
+                                <a href="windspeed.html" class="dropdown-item">Wind Speed</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="comparisons.html" class="nav-link">Comparisons</a></li>
+                        <li class="nav-item">
+                            <a href="data.html" class="nav-link">Data</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="row">
+                <div class="col-md-8">
+                    <article>
+                        <h1 class="h1_main">Latitude vs. Cloudiness</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <figure class="figure">
+                                    <img src="visualizations/cloudiness_cropped.png"
+                                         alt="Graph showing relationship between latitude and cloudiness."
+                                         class="figure-img 
+                                                img-fluid 
+                                                rounded">
+                                    <figcaption class="figure-caption 
+                                                       text-center 
+                                                       font-italic 
+                                                       font-weight-bold
+                                                       mainFigure_caption">
+                                        Latitude vs Cloudiness
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-6">
+                                <p>What is the relationship between latitude and cloudiness?</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>The plot above shows a relationship between cloudiness and distance to the
+                                    equator.
+                                </p>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <aside>
+                        <h1 class="h1_aside">Visualizations</h1>
+                        <nav class="nav">
+                            <div id="visualization_links"
+                                 class="row 
+                                        row-cols-1 
+                                        row-cols-sm-2">
+                                <div class="col">
+                                    <a href="maxtemp.html" class="nav-link viz_links">
+                                        vs. Max Temp
+                                        <img src="visualizations/maxtemp_cropped.png"
+                                             alt="Graph showing relationship between latitude and max temperatures."
+                                             class="img-fluid"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="humidity.html" class="nav-link viz_links">
+                                        vs. Humidity
+                                        <img src="visualizations/humidity_cropped.png"
+                                             alt="Graph showing relationship between latitude and humidity."
+                                             class="img-fluid"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="cloudiness.html" class="nav-link
+                                                                     viz_links
+                                                                     viz_links_active">
+                                        vs. Cloudiness
+                                        <img src="visualizations/cloudiness_cropped.png"
+                                             alt="Graph showing relationship between latitude and cloudiness."
+                                             class="img-fluid"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="windspeed.html" class="nav-link viz_links">
+                                        vs. Windspeed
+                                        <img src="visualizations/windspeed_cropped.png"
+                                             alt="Graph showing relationship between latitude and wind speeds."
+                                             class="img-fluid"></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="bg-dark">
+            &copy; Copyright: Joseph DiCastro 2019
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</html>
