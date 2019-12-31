@@ -14,7 +14,7 @@
     <link rel="stylesheet"
           href="styles.css">
 
-    <title>Latitude Analyses: Latitude vs. Max Temperatures</title>
+    <title>Latitude Analyses: Latitude vs. Wind Speed</title>
 </head>
 
 <body>
@@ -52,14 +52,15 @@
                                 Plots</a>
                             <div aria-labelledby="navbarDropdownMenuLink"
                                  class="dropdown-menu">
-                                <a href="maxtemp.html" class="dropdown-item active bg-dark">Max Temp</a>
+                                <a href="maxtemp.html" class="dropdown-item">Max Temp</a>
                                 <a href="humidity.html" class="dropdown-item">Humidity</a>
                                 <a href="cloudiness.html" class="dropdown-item">Cloudiness</a>
-                                <a href="windspeed.html" class="dropdown-item">Wind Speed</a>
+                                <a href="windspeed.html" class="dropdown-item active bg-dark"">Wind Speed</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="comparisons.html" class="nav-link">Comparisons</a></li>
+                        <li class=" nav-item">
+                                    <a href="comparisons.html" class="nav-link">Comparisons</a>
+                        </li>
                         <li class="nav-item">
                             <a href="data.html" class="nav-link">Data</a></li>
 
@@ -71,12 +72,12 @@
             <div class="row">
                 <div class="col-md-8">
                     <article>
-                        <h1 class="h1_main">Latitude vs. Max Temperatures </h1>
+                        <h1 class="h1_main">Latitude vs. Wind Speed</h1>
                         <div class="row">
                             <div class="col-md-6">
                                 <figure class="figure">
-                                    <img src="visualizations/maxtemp_cropped.png"
-                                         alt="Graph showing relationship between latitude and max temperatures."
+                                    <img src="visualizations/windspeed_cropped.png"
+                                         alt="Graph showing relationship between latitude and wind speed."
                                          class="figure-img 
                                                 img-fluid 
                                                 rounded">
@@ -85,22 +86,17 @@
                                                        font-italic 
                                                        font-weight-bold
                                                        mainFigure_caption">
-                                        Latitude vs Max Temp
+                                        Latitude vs Wind Speed
                                     </figcaption>
                                 </figure>
                             </div>
                             <div class="col-md-6">
-                                <p>How does the average temperature increase or decrease as one changes one's distance
-                                    to the equator?</p>
-                                <p>We have a common sense intution that temperatures increase as we get closer to the
-                                    equator,
-                                    and that they decrease the farther we get away from it, but how do we quantify that?
-                                </p>
+                                <p>What is the relationship between latitude and wind speed?</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>The plot above shows a clear relationship between max temperature and distance to the
+                                <p>The plot above shows a relationship between wind speed and distance to the
                                     equator.
                                 </p>
 
@@ -117,9 +113,7 @@
                                         row-cols-1 
                                         row-cols-sm-2">
                                 <div class="col">
-                                    <a href="maxtemp.html" class="nav-link 
-                                                                  viz_links
-                                                                  viz_links_active">
+                                    <a href="maxtemp.html" class="nav-link viz_links">
                                         vs. Max Temp
                                         <img src="visualizations/maxtemp_cropped.png"
                                              alt="Graph showing relationship between latitude and max temperatures."
@@ -140,7 +134,9 @@
                                              class="img-fluid"></a>
                                 </div>
                                 <div class="col">
-                                    <a href="windspeed.html" class="nav-link viz_links">
+                                    <a href="windspeed.html" class="nav-link 
+                                                                    viz_links
+                                                                    viz_links_active">
                                         vs. Windspeed
                                         <img src="visualizations/windspeed_cropped.png"
                                              alt="Graph showing relationship between latitude and wind speeds."
