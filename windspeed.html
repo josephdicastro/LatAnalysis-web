@@ -91,14 +91,51 @@
                                 </figure>
                             </div>
                             <div class="col-md-6">
-                                <p>What is the relationship between latitude and wind speed?</p>
+                                <p class="question">What is the relationship between latitude and wind speed?</p>
+                                <p>Wind speeds seem to increase as we go up in latitude, but, with so much data
+                                    clustered at the lowest wind speeds, a true signal is hard to detect.</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>The plot above shows a relationship between wind speed and distance to the
-                                    equator.
+                                <p>Our regression line here doesn't match the shape of the data well, so at the very
+                                    least, we know we can't speak of a strictly linear relationship.</p>
+                                <figure class="figure">
+                                    <img src="visualizations/latitude_vs_windspeed.png"
+                                         alt="Graph showing relationship between latitude and windspeed, with regression line."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Latitude vs wind speed (with regression line)
+                                    </figcaption>
+                                </figure>
+                                <p>When we look at the line graph of the means, again, we see a trend that wind speeds
+                                    seem to increase
+                                    as we go up in latitude, but the means for these groups don't show a great nominal
+                                    difference,
+                                    as we are only moving up one or two miles per hour within the groups.
+                                    The lowest means are just under 6mph, and the highest means are just over 10mph,
+                                    so the differences aren't very great.
                                 </p>
+                                <figure class="figure">
+                                    <img src="visualizations/winddspeed_means.png"
+                                         alt="Graph showing relationship between latitude and means of cloudiness, by absolute value of latitude."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Line graph of absolute value of Latitude vs Wind Speed
+                                    </figcaption>
+                                </figure>
 
                             </div>
                         </div>

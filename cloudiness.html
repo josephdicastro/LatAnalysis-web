@@ -90,15 +90,47 @@
                                 </figure>
                             </div>
                             <div class="col-md-6">
-                                <p>What is the relationship between latitude and cloudiness?</p>
+                                <p class="question">What is the relationship between latitude and cloudiness?</p>
+                                <p> Cloudiness percentage doesn't seem to correlate with latitude at all. We see BOTH
+                                    high and low cloudiness levels at all latitudes.</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>The plot above shows a relationship between cloudiness and distance to the
-                                    equator.
+                                <p>Our regression line here is very poorly fit.</p>
+                                <figure class="figure">
+                                    <img src="visualizations/latitude_vs_cloudiness.png"
+                                         alt="Graph showing relationship between latitude and cloudiness, with regression line."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Latitude vs Cloudiness (with regression line)
+                                    </figcaption>
+                                </figure>
+                                <p>When we look at the line graph of the means, we see a similar diversity in the data.
+                                    The highest latitudes here show the highest cloudiness levels, so there may be a
+                                    signal there,
+                                    but it's difficult to really see without a different analysis.
                                 </p>
-
+                                <figure class="figure">
+                                    <img src="visualizations/cloudiness_means.png"
+                                         alt="Graph showing relationship between latitude and means of cloudiness, by absolute value of latitude."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Line graph of absolute value of Latitude vs Cloudiness
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </article>

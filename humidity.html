@@ -90,15 +90,49 @@
                                 </figure>
                             </div>
                             <div class="col-md-6">
-                                <p>What is the relationship between latitude and humidity?</p>
+                                <p class="question">What is the relationship between latitude and humidity?</p>
+                                <p>Latitude and humidity show a relationship, but it's quite different than our <a
+                                       href="maxtemp.html">Max Temp analyis</a>,
+                                    which showed a linear trend from higher temps at lower latitudes to lower temps at
+                                    higher lats.</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>The plot above shows a relationship between max temperature and distance to the
-                                    equator.
-                                </p>
-
+                                <p>Here we see higher humidity readings at the lowest AND the highest latitudes, with
+                                    lower levels of humidity at the in the mid-latitudes. The linear regression line
+                                    doesn't really fit the data well, which shows a more complex relationship than a
+                                    simply linear one</p>
+                                <figure class="figure">
+                                    <img src="visualizations/latitude_vs_humidity.png"
+                                         alt="Graph showing relationship between latitude and humidity, with regression line."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Latitude vs Humidity (with regression line)
+                                    </figcaption>
+                                </figure>
+                                <p>We can see the higher humidities clearer when we look at the means by absolute value
+                                    of latitude.</p>
+                                <figure class="figure">
+                                    <img src="visualizations/humidity_means.png"
+                                         alt="Graph showing relationship between latitude and means of humidity, by absolute value of latitude."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Line graph of absolute value of Latitude vs Humidity
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </article>

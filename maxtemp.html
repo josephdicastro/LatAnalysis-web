@@ -78,8 +78,7 @@
                                     <img src="visualizations/maxtemp_cropped.png"
                                          alt="Graph showing relationship between latitude and max temperatures."
                                          class="figure-img 
-                                                img-fluid 
-                                                rounded">
+                                                img-fluid">
                                     <figcaption class="figure-caption 
                                                        text-center 
                                                        font-italic 
@@ -90,20 +89,59 @@
                                 </figure>
                             </div>
                             <div class="col-md-6">
-                                <p>How does the average temperature increase or decrease as one changes one's distance
+                                <p class="question">How does the average temperature increase or decrease as one changes
+                                    one's distance
                                     to the equator?</p>
                                 <p>We have a common sense intution that temperatures increase as we get closer to the
-                                    equator,
-                                    and that they decrease the farther we get away from it, but how do we quantify that?
+                                    equator, and that they decrease the farther we get away from it, but how do we
+                                    quantify that?
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>The plot above shows a clear relationship between max temperature and distance to the
-                                    equator.
+                                <p>Looking at our basic plot above, we see that the highest max temperature points are
+                                    clustered
+                                    around Latitude 0, and that the temperatures decrease as one moves more north or
+                                    more south.
+                                    Even though there are outliers (especially in the southern hemisphere),
+                                    these findings show how the cities around the equator are generally hotter than
+                                    cities farther from it.
                                 </p>
-
+                                <p>When we look at a plot that has a regression line on it, we see the relationship a
+                                    little bit clearer:</p>
+                                <figure class="figure">
+                                    <img src="visualizations/latitude_vs_maxtemp.png"
+                                         alt="Graph showing relationship between latitude and max temperatures, with regression line."
+                                         class="figure-img 
+                                                img-fluid 
+                                                rounded">
+                                    <figcaption class="figure-caption 
+                                                       text-center 
+                                                       font-italic 
+                                                       font-weight-bold
+                                                       mainFigure_caption">
+                                        Latitude vs Max Temp (with regression line)
+                                    </figcaption>
+                                </figure>
+                                <p>When we group the means by latitude (using the absolute value of the latitude,
+                                    instead of keeping the hemisphere references),
+                                    we see a clear trend of decreasing max temp mean as we go up in our latitude groups:
+                                </p>
+                                <figure class="figure">
+                                    <img src="visualizations/max_temp_means.png"
+                                         alt="Graph showing relationship between latitude and means of temperatures, by latitude."
+                                         class="figure-img 
+                                                    img-fluid 
+                                                    rounded">
+                                    <figcaption class="figure-caption 
+                                                           text-center 
+                                                           font-italic 
+                                                           font-weight-bold
+                                                           mainFigure_caption">
+                                        Line graph of absolute value of Latitude vs Mean of Temp
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </article>
